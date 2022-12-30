@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #f53844, #fc9842);
+
+  padding: 5rem;
+}
+
+.container {
+  display: inline-block;
+  margin: auto;
+
+  height: 100%;
+  max-width: 830px;
+  
+  grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+
+  display: grid;
+  gap: 1rem;
+
+  transition: grid-template-columns 0.5s;
+}
+
+.box {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/*
+  DONT WORK WITH FIREFOX
+*/
+/* !important to override inline style from JS */
+.container:has(.box:nth-child(1):hover) {
+  grid-template-columns: 4fr 1fr 1fr 1fr 1fr !important;
+}
+
+.container:has(.box:nth-child(2):hover) {
+  grid-template-columns: 1fr 4fr 1fr 1fr 1fr !important;
+}
+
+.container:has(.box:nth-child(3):hover) {
+  grid-template-columns: 1fr 1fr 4fr 1fr 1fr !important;
+}
+
+.container:has(.box:nth-child(4):hover) {
+  grid-template-columns: 1fr 1fr 1fr 4fr 1fr !important;
+}
+
+.container:has(.box:nth-child(5):hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 4fr !important;
+}
