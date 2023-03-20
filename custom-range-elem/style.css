@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+}
+
+/* STYLE START HERE */
+
+.progress {
+    border-radius: 30px;
+    background-color: #fff;
+
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    height: 8px;
+    border-radius: 30px;
+    background-color: #f3c623;
+
+    /* Progress Value here */
+    width: 50%; 
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom {
+    text-align: right;
+}
