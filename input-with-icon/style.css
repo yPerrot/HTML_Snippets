@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* STYLE START HERE */
+
+.container {
+    width: 300px;
+    margin: 20px 50px;
+    border: none;
+    position: relative;
+}
+
+.search-bar-input {
+    position: relative;
+    background: transparent;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 2px solid black;
+    width: 100%;
+}
+
+.position-left {
+    position: absolute;
+    
+    top: calc(50% - 8px); /* 8px = Icon width / 2 */
+    left: 6px; /* 6px = (Container margin / 2) - (Icon width / 2) - Border width*/
+}
+
+.position-right {
+    position: absolute;
+
+    top: calc(50% - 8px); /* 8px = Icon width / 2 */
+    right: 6px; /* 6px = (Container margin / 2) - (Icon width / 2) - Border width*/
+}
