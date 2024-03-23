@@ -1,0 +1,36 @@
+html[data-theme="dark"] body {
+    background: rgb(84, 84, 84);
+}
+
+/* Usefull style */
+:root {
+    --theme-toggle-duration: .4s;
+}
+
+svg.icon-theme-toggle.moon g circle {
+    transform: scale(1.4);
+    transition-delay: 0s;
+}
+
+svg.icon-theme-toggle.moon g path {
+    transform: scale(.75);
+    transition-delay: 0s;
+}
+
+svg.icon-theme-toggle.moon :first-child path {
+    d: path("M-9 3h25a1 1 0 0017 13v30H0Z");
+    transition-delay: calc(var(--theme-toggle-duration) * .4);
+    transition-timing-function: cubic-bezier(0, 0, 0, 1.25);
+}
+
+svg.icon-theme-toggle :first-child path {
+    transition-duration: calc(var(--theme-toggle-duration) * .6);
+    transition-property: transform, d;
+    transition-timing-function: cubic-bezier(0, 0, .5, 1);
+}
+
+svg.icon-theme-toggle g circle,
+svg.icon-theme-toggle g path {
+    transform-origin: center;
+    transition: transform calc(var(--theme-toggle-duration) * .65) cubic-bezier(0, 0, 0, 1.25) calc(var(--theme-toggle-duration) * .35);
+}
